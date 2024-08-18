@@ -49,7 +49,6 @@ date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 trainer.fine_tune(
     "models/{}-{}".format(model.replace("/", "-"), date),
     max_epochs=10,
-    main_evaluation_metric=[],
     mini_batch_size=8,
     mini_batch_chunk_size=1,  # remove this parameter to speed up computation if you have a big GPU
 )
